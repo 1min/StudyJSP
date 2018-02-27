@@ -66,7 +66,6 @@ public class ModifyOKDB extends HttpServlet {
 		
 		if(pwConfirm()){
 			System.out.println("OK");
-			
 			String query = "update member1 set name ='" + name + "', phone1= '" + phone1 + "', phone2 = '" + phone2 + "', phone3 = '" + phone3 + "', gender = '" + gender + "'";
 //			System.out.println(query);
 			try {

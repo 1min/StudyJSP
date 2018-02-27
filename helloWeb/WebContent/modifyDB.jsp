@@ -67,9 +67,5 @@ if(gender.equals("man")){
 		<input type="submit" value="정보수정"> <input type="reset" value="취소">
 </form>
 
-
-
-
-
 </body>
 </html>
