@@ -10,6 +10,18 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <context-param>
+    <param-name>con_name</param-name>
+    <param-value>con_name은 홍길동 입니다.</param-value>
+  </context-param>
+  <context-param>
+    <param-name>con_id</param-name>
+    <param-value>con_id는 abcde입니다.</param-value>
+  </context-param>
+  <context-param>
+    <param-name>con_pw</param-name>
+    <param-value>con_pw는 12345 입니다.</param-value>
+  </context-param>
+  <context-param>
     <param-name>id</param-name>
     <param-value>abc</param-value>
   </context-param>

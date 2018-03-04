@@ -3,6 +3,7 @@ package com.javalec.ex;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -214,5 +215,47 @@ public class MemberDaoTM {
 		
 		return connection;
 	}
+	
+	public ArrayList<MemberDtoTM> membersAll(){
+		ArrayList<MemberDtoTM> dtos = new ArrayList<MemberDtoTM>();
+		Connection connection= null;
+		PreparedStatement pstmt= null;
+		ResultSet rs= null;
+		String query = "SELECT * FROM MEMBERTM";
+		
+		try {
+			connection = getConnection();
+			pstmt = connection.prepareStatement(query);
+			rs = pstmt.executeQuery();
+			
+			System.out.println("============");
+			while (rs.next()) {
+				MemberDtoTM dto = new MemberDtoTM();
+				dto.setId(rs.getString("id"));
+				dto.setPw(rs.getString("pw"));
+				dto.setName(rs.getString("name"));
+				dto.seteMail(rs.getString("eMail"));
+				dto.setrDate(rs.getTimestamp("rDate"));
+				dto.setAddress(rs.getString("address"));
+				dtos.add(dto);
+			}
+			System.out.println("--------------------------");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				rs.close();
+				pstmt.close();
+				connection.close();
+			} catch (Exception e2) {
+				e2.printStackTrace();
+			}
+		}
+		
+		return dtos;
+		
+	}
+	
 	
 }
