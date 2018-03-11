@@ -17,15 +17,15 @@
 			<td>날짜</td>
 			<td>히트</td>
 		</tr>
-		<c:forEach items="${list}" var="dto">
+		<c:forEach items="${list}" var="dto"> <!-- ${list}는 dao가 반환한 dtos 그리고 dto는 그 하나하나 끝까지 arraylist의 길이만큼 -->
 		<tr>
 			<td>${dto.bId}</td>
 			<td>${dto.bName}</td>
 			<td>
-				<c:forEach begin="1" end="${dto.bIndent}">-</c:forEach>
-				<a href="content_view.do?bId=${dto.bId}">${dto.bTitle}</a></td>
-			<td>${dto.bDate}</td>
-			<td>${dto.bHit}</td>
+				<c:forEach begin="1" end="${dto.bIndent}">-</c:forEach><!-- 들여쓰기 -->
+				<a href="content_view.do?bId=${dto.bId}">${dto.bTitle}</a></td><!-- id값에 맞는 (select)컨텐츠 가져오기 -->
+			<td>${dto.bDate}</td><!-- 생성일 -->
+			<td>${dto.bHit}</td><!-- 조회수 -->
 		</tr>
 		</c:forEach>
 		<tr>

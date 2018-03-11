@@ -9,6 +9,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-404에러입니다<br>
+404에러입니다.<br>
+웹페이지 경로오류라구 친구
 </body>
 </html>

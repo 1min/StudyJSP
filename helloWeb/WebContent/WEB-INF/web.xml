@@ -42,7 +42,7 @@
     </init-param>
     <init-param>
       <param-name>path</param-name>
-      <param-value>C:\Users\Administrator\git\StudyJSP\helloWeb</param-value>
+      <param-value>D:\GIT_JSP\StudyJSP\helloWeb</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
@@ -62,7 +62,7 @@
     </init-param>
     <init-param>
       <param-name>path</param-name>
-      <param-value>C:\Users\Administrator\git\StudyJSP\helloWeb</param-value>
+      <param-value>D:\GIT_JSP\StudyJSP\helloWeb</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>

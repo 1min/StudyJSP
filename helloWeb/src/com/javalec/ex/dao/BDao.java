@@ -21,7 +21,7 @@ public class BDao {
 		
 		try {
 			Context context = new InitialContext();
-			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/Oracle10g");
+			dataSource = (DataSource) context.lookup("java:comp/env/jdbc/Oracle10g");//데이터 소스얻기 고정.
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -67,7 +67,7 @@ public class BDao {
 		try {
 			connection = dataSource.getConnection();
 			
-			String query = "select bId, bName, bTitle, bContent, bDate, bHit, bGroup, bStep, bIndent from mvc_board order by bGroup desc, bStep asc";
+			String query = "select bId, bName, bTitle, bContent, bDate, bHit, bGroup, bStep, bIndent from mvc_board order by bGroup desc, bStep asc";//bGroup으로 내림차순 bStep으로 오름차순
 			preparedStatement = connection.prepareStatement(query);
 			resultSet = preparedStatement.executeQuery();
 			
